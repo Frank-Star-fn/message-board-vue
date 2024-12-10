@@ -19,16 +19,13 @@ async function getNote(url) {
 
 async function searchNote() {
   const responseJson = await getNote('http://localhost:3001/api/data');
-
   for(let i=0;i<responseJson.length;i++){
     listNote.value.push(responseJson[i]);
   }
-
   return;
 }
 
 searchNote(); // 查询留言
-
 
 // 发送post请求
 async function postDataUsingFetch(url = '', data = {}) {
@@ -128,7 +125,6 @@ async function updateNote(){
         <div></div>
     </div>
   </div>
-
 
   <div class="mt-6 mb-4">
     <h2 class="my-2 text-3xl text-theme-4 font-light">
