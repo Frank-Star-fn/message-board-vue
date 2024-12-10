@@ -86,7 +86,7 @@ function addNoteHere(userVal, textVal){
 <template>
 <div class="md-max-w-2p5xl mx-auto mt-6">
   <div></div>
-  <div class="bg-blue-c8e4ff p-2">
+  <div class="bg-theme-1 p-2">
     <div class="flex justify-content-between">
         <div>
           <span>
@@ -101,7 +101,7 @@ function addNoteHere(userVal, textVal){
 
 
   <div class="mt-6 mb-4">
-    <h2 class="my-2 text-3xl text-blue-1d5ca2 font-light">
+    <h2 class="my-2 text-3xl text-theme-4 font-light">
       留言板
     </h2>
     <div>留言板测试</div>
@@ -127,7 +127,7 @@ function addNoteHere(userVal, textVal){
       <div>
         <div></div>
 
-        <div class="flex p-2 bg-blue-c8e4ff">
+        <div class="flex p-2 bg-theme-1">
           <div class="basis-10/12">
             <textarea name="" id="" class="hidden"></textarea>
             <div class="h-16.5">
@@ -144,7 +144,7 @@ function addNoteHere(userVal, textVal){
           </div>
 
           <div class="basis-2/12 flex justify-center">
-            <button type="button" @click="addNote" class="w-11 h-7.5 bg-blue-2780e3 text-white">
+            <button type="button" @click="addNote" class="w-11 h-7.5 bg-theme-2 text-white">
               <i class=""></i>
               保存
             </button>
@@ -155,7 +155,7 @@ function addNoteHere(userVal, textVal){
 
     <div v-for="(item) in listNote" v-bind:key="item">
       <div class="flex mt-2">
-        <div class="flex-none w-10 h-10 mt-2 mr-2 bg-blue-007fff text-white rounded-full text-26px text-center">
+        <div class="flex-none w-10 h-10 mt-2 mr-2 bg-theme-3 text-white rounded-full text-26px text-center">
           F
         </div>
 

@@ -10,17 +10,14 @@
 .text-blue-1d5ca2 {
   color: #1d5ca2;
 }
-.bg-blue-c8e4ff {
-  background-color: #c8e4ff;
+.text-theme-1 {
+  color: #bbf7d0;
 }
-.bg-blue-2780e3 {
-  background-color: #2780e3;
+.text-theme-4 {
+  color: #15803d;
 }
 .bg-blue-007fff {
   background-color: #007fff;
-}
-.bg-blue-1d5ca2 {
-  background-color: #1d5ca2;
 }
 .bg-black-373a3c {
   background-color: #373a3c;
@@ -33,6 +30,18 @@
 }
 .bg-grey-868e96 {
   background-color: #868e96;
+}
+.bg-theme-1 {
+  background-color: #bbf7d0;
+}
+.bg-theme-2 {
+  background-color: #16a34a;
+}
+.bg-theme-3 {
+  background-color: #00c864;
+}
+.bg-theme-4 {
+  background-color: #15803d;
 }
 .text-26px {
   font-size: 26px;
