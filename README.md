@@ -1,4 +1,8 @@
 # Message Board by Vue
+## update
+增加了绿色主题可供选择。
+
+## 简介
 一个简易留言板。\
 技术栈: \
 前端: Vue3 + Tailwind CSS + Less \
@@ -8,8 +12,9 @@ UI界面参考
 [Xoyondo留言板](https://xoyondo.com/zh/create-personal-message-board), 推荐页面大小为800x1000.
 
 ## Screenshot
-![image](./img_show/page1-1.png)
-
+<div align=center>
+<img src="./img_show/page1-3.png" width=50% /><img src="./img_show/page1-4.png" width=50% />
+</div>
 
 ## Recommended IDE Setup
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
