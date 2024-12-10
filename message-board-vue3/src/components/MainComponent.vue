@@ -19,14 +19,9 @@ async function getNote(url) {
 
 async function searchNote() {
   const responseJson = await getNote('http://localhost:3001/api/data');
-  //
-  // console.log(responseJson);
-  // console.log("responseJson = "+JSON.stringify(responseJson));
-  // console.log("responseJson.length = "+responseJson.length);
 
   for(let i=0;i<responseJson.length;i++){
     listNote.value.push(responseJson[i]);
-    // console.log("responseJson[i] = "+JSON.stringify(responseJson[i]));
   }
 
   return;
@@ -46,7 +41,6 @@ async function postDataUsingFetch(url = '', data = {}) {
     credentials: 'same-origin', // 包括、省略、同源
     headers: {
       'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
     },
     redirect: 'follow', // 手动处理、跟随、错误
     referrerPolicy: 'no-referrer', // no-referrer, *client
@@ -84,7 +78,6 @@ async function addNote() {
     console.log("消息为空");
   }
 }
-
 
 // function delNoteHere(){
 //   console.log("delNoteHere");
@@ -206,7 +199,7 @@ async function updateNote(){
               <i>
                 <!-- 修改 -->
               </i>
-              <span @click="delNote(item.id)">删除</span>
+              <span @click="delNote(item.id)" class="cursor-pointer">删除</span>
             </div>
             {{ item.content }}
           </div>

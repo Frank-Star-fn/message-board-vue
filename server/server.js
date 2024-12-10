@@ -73,7 +73,10 @@ app.post('/api/addnote', (req, res) => {
     }else{ // s_message.length>0
       let sqlStr =  "INSERT INTO note (user, content, date)VALUES(\'"+s_name+"\',\'"+s_message+"\',\'"+s1_len19+"\')"
       db.query(sqlStr,(err)=>{
-          console.log(err,'如果为null，sql语句执行成功')
+        if(err!=null){
+          console.log(err);
+        }
+        // console.log(err,'如果为null，sql语句执行成功')
       })
     }
   }else{
@@ -105,10 +108,10 @@ app.post('/api/addnote', (req, res) => {
 
 // 删除留言
 app.post('/api/delnote', async (req, res) => {
-  console.log("删除留言");
+  // console.log("删除留言");
 
   const receivedData = req.body;
-  console.log(receivedData); // { id: 41 }
+  // console.log(receivedData); // { id: 41 }
 
   try {
     // 确保请求体中包含 id

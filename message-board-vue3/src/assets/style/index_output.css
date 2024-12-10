@@ -636,6 +636,10 @@ video {
   flex-basis: 16.666667%;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-col {
   flex-direction: column;
 }
