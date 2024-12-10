@@ -1,0 +1,73 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.h-7\.5 {
+  height: 30px;
+}
+.h-13\.5 {
+  height: 54px;
+}
+.h-14\.5 {
+  height: 58px;
+}
+.h-16\.5 {
+  height: 66px;
+}
+.h-42\.5 {
+  height: 170px;
+}
+.text-blue-1d5ca2 {
+  color: #1d5ca2;
+}
+.text-grey-383 {
+  color: rgba(255, 255, 255, 0.5);
+}
+.text-grey-868e96 {
+  color: #868e96;
+}
+.bg-blue-c8e4ff {
+  background-color: #c8e4ff;
+}
+.bg-blue-2780e3 {
+  background-color: #2780e3;
+}
+.bg-blue-007fff {
+  background-color: #007fff;
+}
+.bg-blue-1d5ca2 {
+  background-color: #1d5ca2;
+}
+.bg-black-373a3c {
+  background-color: #373a3c;
+}
+.bg-grey-f8f9fa {
+  background-color: #f8f9fa;
+}
+.bg-grey-e1e1e1 {
+  background-color: #e1e1e1;
+}
+.bg-grey-868e96 {
+  background-color: #868e96;
+}
+
+.text-26px {
+  font-size: 26px;
+}
+.leading-7\.5 {
+  line-height: 30px;
+}
+
+.bottom-13\.5 {
+  bottom: 54px;
+}
+
+.max-w-2p5xl {
+  max-width: 45rem; 
+}
+
+@media (min-width: 768px) {
+  .md-max-w-2p5xl {
+      max-width: 720px;
+  }
+} */
