@@ -7,10 +7,8 @@ import '@/assets/style/index_output.css' // 全局引入
 <template>
   <main>
     <BgHeader />
-
     <MainComponent />
   </main>
-
 </template>
 
 <style scoped>

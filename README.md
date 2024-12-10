@@ -21,13 +21,20 @@ UI界面参考
 </div>
 <!-- ![image](./img_show/page1-3.png) -->
 
-## Recommended IDE Setup
+## IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[VSCode](https://code.visualstudio.com/) + Easy LESS插件
+
+css构建过程:\
+index.less -(Easy LESS插件)-> index.css -(Tailwind CLI)-> index_output.css
 
 ## Project Setup
 
 ```sh
+cd vue
+cnpm install
+
+cd server
 cnpm install
 ```
 
@@ -35,7 +42,7 @@ cnpm install
 
 ```sh
 # 启动前端
-cd vue3
+cd vue
 npm run dev
 
 # 启动后端
