@@ -56,6 +56,15 @@ async function postDataUsingFetch(url = '', data = {}) {
   return response.json(); // 解析 JSON 响应为原生 JavaScript 对象
 }
 
+// function addNoteHere(userVal, textVal){
+//   listNote.value.unshift({
+//       user: userVal,
+//       date: new Date(),
+//       content: textVal,
+//   })
+//   dataMessage.value = '';
+// }
+
 let dataName = ref('Frank_Star');
 let dataMessage = ref('');
 
@@ -65,20 +74,48 @@ async function addNote() {
       message: dataMessage.value
   };
   if(dataMessage.value.length>0){
-    postDataUsingFetch('http://localhost:3001/api/addnote', formData);
-    addNoteHere(dataName.value, dataMessage.value);
+    await postDataUsingFetch('http://localhost:3001/api/addnote', formData);
+    // addNoteHere(dataName.value, dataMessage.value);
+
+    dataMessage.value = '';
+    await updateNote();
+
   }else{
     console.log("消息为空");
   }
 }
 
-function addNoteHere(userVal, textVal){
-  listNote.value.unshift({
-      user: userVal,
-      date: new Date(),
-      content: textVal,
-  })
-  dataMessage.value = '';
+
+// function delNoteHere(){
+//   console.log("delNoteHere");
+//   updateNote();
+//   // listNote.value.unshift({
+
+//   // })
+// }
+
+async function delNote(noteId){
+  // console.log(noteId);
+  console.log("delNote, noteId = "+noteId);
+  const formData = {
+      id: noteId,
+  };
+  if(noteId != null){
+    await postDataUsingFetch('http://localhost:3001/api/delnote', formData);
+    // delNoteHere();
+    await updateNote();
+
+  }else{
+    console.log("noteId为空");
+  }
+}
+
+async function updateNote(){
+  listNote.value = [];
+  const responseJson = await getNote('http://localhost:3001/api/data');
+  for(let i=0;i<responseJson.length;i++){
+    listNote.value.push(responseJson[i]);
+  }
 }
 
 </script>
@@ -165,6 +202,11 @@ function addNoteHere(userVal, textVal){
               <strong>{{ item.user }}</strong>
               <span class="px-2 text-grey-868e96">·</span>
               <span class="text-grey-868e96">{{ new Date(item.date).toLocaleString() }}</span>
+              <span class="px-2 text-grey-868e96">·</span>
+              <i>
+                <!-- 修改 -->
+              </i>
+              <span @click="delNote(item.id)">删除</span>
             </div>
             {{ item.content }}
           </div>

@@ -90,6 +90,46 @@ app.post('/api/addnote', (req, res) => {
   }
 });
 
+// // 假设有一个连接到数据库的方法
+// const deleteNoteFromDB = async (id) => {
+//   // 这里应该是与数据库交互的代码
+//   // 返回 true 表示删除成功，false 表示删除失败
+//   // 示例：
+//   // return await db.collection('notes').deleteOne({ id }).then(result => result.deletedCount > 0);
+//   const sql = 'DELETE FROM note WHERE id = '+id+';';
+//   return await db.query(sql, (err, results) => {
+//     if (err) throw err;
+//     res.json(results);
+//   });
+// };
+
+// 删除留言
+app.post('/api/delnote', async (req, res) => {
+  console.log("删除留言");
+
+  const receivedData = req.body;
+  console.log(receivedData); // { id: 41 }
+
+  try {
+    // 确保请求体中包含 id
+    const { id } = req.body;
+    if (!id) {
+      return res.status(400).json({ message: '缺少必要的参数 id' });
+    }
+
+    // 从数据库中删除留言
+    const sql = 'DELETE FROM note WHERE id = '+id+';';
+    await db.query(sql, (err, results) => {
+      if (err) throw err;
+      res.json(results);
+    });
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: '服务器内部错误' });
+  }
+});
+
 
 app.listen(port, () => {
   console.log("Server running at http://localhost:" + port);
