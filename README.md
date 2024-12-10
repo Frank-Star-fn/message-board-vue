@@ -28,15 +28,17 @@ UI界面参考
 ## Project Setup
 
 ```sh
-npm install
+cnpm install
 ```
 
 ### Run
 
 ```sh
 # 启动前端
+cd vue3
 npm run dev
 
 # 启动后端
+cd server
 node server.js
 ```
